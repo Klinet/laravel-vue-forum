@@ -6,6 +6,16 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    private $page;
+
+    /**
+     * @param mixed $page
+     */
+    public function setPage($page): void
+    {
+        $this->page = $page;
+    }
+
     /**
      * Create a new controller instance.
      *
@@ -25,4 +35,23 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function teszt()
+    {
+        return $this->Home();
+    }
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function Home()
+    {
+        return view('home');
+    }
+
+    public function f($a, $s)
+    {
+    }
+
+
 }
